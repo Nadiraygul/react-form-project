@@ -1,14 +1,17 @@
-// src/App.jsx
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import UserList from './pages/Userlist';
+import UserDetails from './pages/Userdetails';
 import React from 'react';
-import './styles/App.css';  // Ana stil dosyasını buraya import ediyoruz
-import Home from './pages/Home';
 
-const App = () => {
+function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<UserList />} />
+        <Route path="/user/:id" element={<UserDetails />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
