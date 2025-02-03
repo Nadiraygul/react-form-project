@@ -51,7 +51,7 @@ useEffect(() => {
           >
             <TableCell component="th" scope="row">
               {row.id}
-              <Button  variant="contained">Contained</Button>
+              <Button onClick={() => navigate(`/details/${row.id}`)} variant="contained">Contained</Button>
 
             </TableCell>
             <TableCell >{row.name}</TableCell>

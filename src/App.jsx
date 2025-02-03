@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import List from './pages/List';
 import Tablee from './pages/Tablee';
 import Nav from './pages/Nav';
-import "./styles/main.css"
+import "./styles/main.css";
+import Details from './pages/Details';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Tablee />} />
       <Route path="/LIST" element={<List />} />
+      <Route path="/details/:id" element={<Details />} />
       
       </Routes >
   </Router>
