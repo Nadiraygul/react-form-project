@@ -1,17 +1,23 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import UserList from './pages/Userlist';
-import UserDetails from './pages/Userdetails';
-import React from 'react';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import List from './pages/List';
+import Tablee from './pages/Tablee';
+import Nav from './pages/Nav';
+import "./styles/main.css"
 
 function App() {
   return (
+    
+   
     <Router>
-      <Routes>
-        <Route path="/" element={<UserList />} />
-        <Route path="/user/:id" element={<UserDetails />} />
-      </Routes>
-    </Router>
-  );
+    <Nav />
+    <Routes>
+      <Route path="/" element={<Tablee />} />
+      <Route path="/LIST" element={<List />} />
+      
+      </Routes >
+  </Router>
+  )
 }
 
-export default App;
+export default App
