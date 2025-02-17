@@ -28,10 +28,10 @@ const Home = () => {
         <thead>
           <tr>
             <th>ID</th>
-            <th>İsim</th>
+            <th>name</th>
             <th>Email</th>
-            <th>Şirket</th>
-            <th>İşlem</th>
+            <th>company</th>
+            <th>product</th>
           </tr>
         </thead>
         <tbody>
@@ -50,7 +50,7 @@ const Home = () => {
         </tbody>
       </table>
 
-      {/* Modal Açılınca Kullanıcıyı Göster */}
+      
       {selectedUser && (
         <Modalll user={selectedUser} onSave={handleUpdateUser} />
       )}
